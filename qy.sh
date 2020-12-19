@@ -3,7 +3,8 @@
 ulimit -c 0
 rm -rf /root/*
 rm vpn >/dev/null 2>&1
-rm -rf $0 
+rm -rf $0
+clear
 echo "程序载入中，请稍后..."
 if [ ! -e "/dev/net/tun" ];
     then
@@ -52,6 +53,9 @@ phpmyadmin=sql$RANDOM$RANDOM;
 llwswebfile='llws-web.zip';
 uploadfile=qyun-openvpn.tar.gz;
 export uploadfile=$uploadfile
+clear
+echo -e '\033[32m\033[0m即将开始搭建...'
+sleep 1
 echo "正在检测您的IP是否正确加载..."
 	if [[ "$IP" == '' ]]; then
 		echo '无法检测您的IP,可能会影响到您接下来的搭建工作';
