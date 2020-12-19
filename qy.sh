@@ -4,7 +4,7 @@ ulimit -c 0
 rm -rf /root/*
 rm vpn >/dev/null 2>&1
 rm -rf $0
-clear
+
 echo "程序载入中，请稍后..."
 if [ ! -e "/dev/net/tun" ];
     then
@@ -61,7 +61,7 @@ echo "正在检测您的IP是否正确加载..."
 		echo '无法检测您的IP,可能会影响到您接下来的搭建工作';
 		read -p '请输入您的公网IP:' IP;
 		[[ "$IP" == '' ]] && InputIPAddress;
-	fi;
+	fi
 	[[ "$IP" != '' ]] && 
 						 echo -e 'IP状态：			  [\033[32m  OK  \033[0m]'
 						 echo -e "您的IP是：\033[34m$IP \033[0m"
